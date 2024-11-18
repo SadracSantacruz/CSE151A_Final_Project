@@ -3,38 +3,38 @@ We observed inconsistencies in file extensions across the images, with some usin
 ## Milestone 3 <br>
 *Note*: You may have to refresh the page if the ``milestone_3.ipynb`` notebook can't render (it'll load eventually). The notebook contains all major and finalized preprocessing, feature extraction, and our baseline model. <br>
 
-1: Finish Major Preprocessing & Data Augmentation
+1: **Finish Major Preprocessing & Data Augmentation**
 - Scaling: Applied standardization to images into 224x224 dimensions
 - Grayscaling: Applied grayscaling to already-scaled images, also used for data augmentation
 - Rotating: Applied varying rotation degrees to images (from 15 to 75 degrees), also used for data augmentation
 - Horizontal Flipping: Applied horizontal flipping to images, also used for data augmentation
 
-2: Train Our First Model
+2: **Train Our First Model**
 Our first model was a Multi-Class Support Vector Machine (SVM), where we performed the following:
 - Feature Extraction: Turned images into embeddings using ResNet50, a pretrained CNN used for image classification.
 - Baseline / First Model Settings: Linear Kernel, no specified C value (defaults to C=1), decision function shape set to OVR (One-vs-Rest for Multi-Class Classification)
 - Hyperparameter Tuning: Utilized Grid Search Cross-Validation to optimize the C parameter and kernel.
 
-3: Evaluate initial model and compare training vs. test error
-Accuracy from Training Set: 100% accuracy
-Training Error: 1 - 1 = 0 (can view in notebook)
+3: **Evaluate initial model and compare training vs. test error**
+Accuracy from Training Set: 100% accuracy <br>
+Training Error: 1 - 1 = 0 (can view in notebook) <br>
 
-Accuracy from Testing Set: 98.54% accuracy.
-Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook)
+Accuracy from Testing Set: 98.54% accuracy. <br>
+Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook) <br>
 
 Based on our initial model, it seemed to do really well in training and testing. However, we decided to test different models with different hyperparameters, and plot the respective model's training and test error based on the model's complexity. This is where we utilized Grid Search Cross-Validation to optimize the C parameter and kernel, and see which models tend to underfit or overfit. (can view in notebook)
 
-4: Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
+4: **Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?**
 Our model seems to fit nicely when the model's hyperparameters are set to C=1 and kernel=linear. These hyperparameters have direct influence on the model's complexity. We especially found that models with a kernel set to RBF and a growing C value tend to overfit on the data, as it performs well with little to no error on our training data, but does worse on our testing data, meaning that these hyperparameters do a bad job generalizing to our unseen testing data.
 Despite this model working really well on the given dataset, we want to try state-of-the-art, cutting-edge solutions. That is, we plan on using Convolutional Neural Networks (CNNs) for our vehicle classification use case. CNNs typically work well for image classification tasks and should theoretically improve the model’s ability to capture the different structures of features / spatial hierarchies that may be in the data. 
 
-5: Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
+5: **Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md**
 - README.md is updated (as you can see)
 - New work for milestone 3 has been added to ``milestone_3.ipynb`` in this repository. It continues from milestone 2.
 - Take a look at the notebook here (you might have to refresh a couple times for it to render):
   [Milestone 3 Notebook](https://github.com/SadracSantacruz/CSE151A_Final_Project/blob/Milestone3/milestone_3.ipynb)
 
-6. Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
+6. **Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?**
 Our first model, a Multi-Class Support Vector Machine (SVM), showed strong performance with 100% accuracy on the training set and 98.54% accuracy on the testing set. While the model performed well overall, the slight discrepancy between training and testing accuracy suggests marginal overfitting, where the model might be too specialized to the training data.
 
 Given that hyperparameter tuning was already applied using Grid Search Cross-Validation to optimize the C parameter and kernel, further improvements could focus on:
