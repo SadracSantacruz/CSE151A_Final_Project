@@ -46,8 +46,8 @@ Our first model, a Multi-Class Support Vector Machine (SVM), showed strong perfo
 <br>
 <br>
 Given that hyperparameter tuning was already applied using Grid Search Cross-Validation to optimize the C parameter and kernel, further improvements could focus on: <br>
-- Model Complexity: Even with hyperparameter tuning, SVMs might still be prone to overfitting, especially when using certain kernel types or regularization values. We can explore other architectures such as neural networks (specifically CNNs), which could better capture spatial hierarchies in the data.
-- Data Augmentation: Although some augmentation was applied (e.g., rotation, flipping), we could potentially expand this to include additional transformations like random cropping or color jitter. This could increase the diversity of training samples and improve generalization.
+- Model Complexity: Even with hyperparameter tuning, SVMs might still be prone to overfitting, especially when using certain kernel types or regularization values. We can explore other architectures such as neural networks (specifically CNNs), which could better capture spatial hierarchies in the data.<br>
+- Data Augmentation: Although some augmentation was applied (e.g., rotation, flipping), we could potentially expand this to include additional transformations like random cropping or color jitter. This could increase the diversity of training samples and improve generalization.<br>
 - Alternative Models: As mentioned, we can test different machine learning algorithms and deep learning architectures, more notably CNNs. Leveraging different approaches could help mitigate the marginal overfitting we are getting.
 <br>
 <br>
