@@ -12,7 +12,7 @@ We observed inconsistencies in file extensions across the images, with some usin
 2: Train Our First Model
 Our first model was a Multi-Class Support Vector Machine (SVM), where we performed the following:
 - Feature Extraction: Turned images into embeddings using ResNet50, a pretrained CNN used for image classification.
-- Baseline / First Model Settings: Linear Kernel, no specified C value, decision function shape set to OVR (One-vs-Rest for Multi-Class Classification)
+- Baseline / First Model Settings: Linear Kernel, no specified C value (defaults to C=1), decision function shape set to OVR (One-vs-Rest for Multi-Class Classification)
 - Hyperparameter Tuning: Utilized Grid Search Cross-Validation to optimize the C parameter and kernel.
 
 3: Evaluate initial model and compare training vs. test error
