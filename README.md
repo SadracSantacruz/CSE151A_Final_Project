@@ -22,15 +22,17 @@ Our first model was a Multi-Class Support Vector Machine (SVM), where we perform
 3: **Evaluate initial model and compare training vs. test error**<br>
 - Accuracy from Training Set: 100% accuracy
 - Training Error: 1 - 1 = 0 (can view in notebook)
-
+<br>
 - Accuracy from Testing Set: 98.54% accuracy
 - Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook)
 <br>
 
 Based on our initial model, it seemed to do really well in training and testing. However, we decided to test different models with different hyperparameters, and plot the respective model's training and test error based on the model's complexity. This is where we utilized Grid Search Cross-Validation to optimize the C parameter and kernel, and see which models tend to underfit or overfit. (can view in notebook)<br>
 
-4: **Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?**<br>
-Our model seems to fit nicely when the model's hyperparameters are set to C=1 and kernel=linear. These hyperparameters have direct influence on the model's complexity. We especially found that models with a kernel set to RBF and a growing C value tend to overfit on the data, as it performs well with little to no error on our training data, but does worse on our testing data, meaning that these hyperparameters do a bad job generalizing to our unseen testing data.<br>
+4: **Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?** 
+Our model seems to fit nicely when the model's hyperparameters are set to C=1 and kernel=linear. These hyperparameters have direct influence on the model's complexity. We especially found that models with a kernel set to RBF and a growing C value tend to overfit on the data, as it performs well with little to no error on our training data, but does worse on our testing data, meaning that these hyperparameters do a bad job generalizing to our unseen testing data.
+<br>
+<br>
 Despite this model working really well on the given dataset, we want to try state-of-the-art, cutting-edge solutions. That is, we plan on using Convolutional Neural Networks (CNNs) for our vehicle classification use case. CNNs typically work well for image classification tasks and should theoretically improve the model’s ability to capture the different structures of features / spatial hierarchies that may be in the data. <br>
 
 5: **Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md**
@@ -41,7 +43,6 @@ Despite this model working really well on the given dataset, we want to try stat
 <br>
 
 6. **Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?**
-<br>
 Our first model, a Multi-Class Support Vector Machine (SVM), showed strong performance with 100% accuracy on the training set and 98.54% accuracy on the testing set. While the model performed well overall, the slight discrepancy between training and testing accuracy suggests marginal overfitting, where the model might be too specialized to the training data.
 <br>
 <br>
