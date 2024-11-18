@@ -1,5 +1,7 @@
 ## Milestone 2 <br>
-We observed inconsistencies in file extensions across the images, with some using uppercase letters (e.g., "JPG" instead of "jpg") and others varying in format (png, jpeg, jpg), so we need to standardize all file extensions to lowercase. The dataset contains 400 images across four classes: Bus, Car, Motorcycle, and Truck, with unique image dimensions per class as follows: Bus – 82, Car – 71, Motorcycle – 74, and Truck – 78. For preprocessing, we will first resize all images to a consistent dimension, ensuring uniformity across the dataset. The target dimensions will be decided based on our approach, whether using a pre-trained neural network or developing a custom model. If resizing alters the desired aspect ratios, we will apply zero padding to center the resized images on a blank canvas, preserving their original proportions. Additionally, we will implement data augmentation techniques to enhance the dataset’s variability, such as rotation, flipping, and scaling, which will help improve the robustness of our model. These preprocessing and augmentation steps will ensure a well-structured, versatile dataset ready for analysis and model training. <br>
+We observed inconsistencies in file extensions across the images, with some using uppercase letters (e.g., "JPG" instead of "jpg") and others varying in format (png, jpeg, jpg), so we need to standardize all file extensions to lowercase. The dataset contains 400 images across four classes: Bus, Car, Motorcycle, and Truck, with unique image dimensions per class as follows: Bus – 82, Car – 71, Motorcycle – 74, and Truck – 78. For preprocessing, we will first resize all images to a consistent dimension, ensuring uniformity across the dataset. The target dimensions will be decided based on our approach, whether using a pre-trained neural network or developing a custom model. If resizing alters the desired aspect ratios, we will apply zero padding to center the resized images on a blank canvas, preserving their original proportions. Additionally, we will implement data augmentation techniques to enhance the dataset’s variability, such as rotation, flipping, and scaling, which will help improve the robustness of our model. These preprocessing and augmentation steps will ensure a well-structured, versatile dataset ready for analysis and model training.
+<br>
+<br>
 ## Milestone 3 <br>
 *Note*: You may have to refresh the page if the ``milestone_3.ipynb`` notebook can't render (it'll load eventually). The notebook contains all major and finalized preprocessing, feature extraction, and our baseline model. <br>
 
@@ -42,10 +44,11 @@ Despite this model working really well on the given dataset, we want to try stat
 <br>
 Our first model, a Multi-Class Support Vector Machine (SVM), showed strong performance with 100% accuracy on the training set and 98.54% accuracy on the testing set. While the model performed well overall, the slight discrepancy between training and testing accuracy suggests marginal overfitting, where the model might be too specialized to the training data.
 <br>
+<br>
 Given that hyperparameter tuning was already applied using Grid Search Cross-Validation to optimize the C parameter and kernel, further improvements could focus on:
 - Model Complexity: Even with hyperparameter tuning, SVMs might still be prone to overfitting, especially when using certain kernel types or regularization values. We can explore other architectures such as neural networks (specifically CNNs), which could better capture spatial hierarchies in the data.
 - Data Augmentation: Although some augmentation was applied (e.g., rotation, flipping), we could potentially expand this to include additional transformations like random cropping or color jitter. This could increase the diversity of training samples and improve generalization.
 - Alternative Models: As mentioned, we can test different machine learning algorithms and deep learning architectures, more notably CNNs. Leveraging different approaches could help mitigate the marginal overfitting we are getting.
 <br>
-
+<br>
 The next step would be to transition to CNNs, which are typically better suited for image classification tasks and can more effectively capture complex, hierarchical features in the data, potentially leading to improved testing accuracy and model robustness.
