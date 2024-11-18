@@ -43,8 +43,6 @@ Despite this model working really well on the given dataset, we want to try stat
 <br>
 6. **Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?**
 Our first model, a Multi-Class Support Vector Machine (SVM), showed strong performance with 100% accuracy on the training set and 98.54% accuracy on the testing set. While the model performed well overall, the slight discrepancy between training and testing accuracy suggests marginal overfitting, where the model might be too specialized to the training data.
-<br>
-<br>
 Given that hyperparameter tuning was already applied using Grid Search Cross-Validation to optimize the C parameter and kernel, further improvements could focus on:
 - Model Complexity: Even with hyperparameter tuning, SVMs might still be prone to overfitting, especially when using certain kernel types or regularization values. We can explore other architectures such as neural networks (specifically CNNs), which could better capture spatial hierarchies in the data.
 - Data Augmentation: Although some augmentation was applied (e.g., rotation, flipping), we could potentially expand this to include additional transformations like random cropping or color jitter. This could increase the diversity of training samples and improve generalization.
