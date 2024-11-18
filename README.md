@@ -22,7 +22,7 @@ Our first model was a Multi-Class Support Vector Machine (SVM), where we perform
 3: **Evaluate initial model and compare training vs. test error**<br>
 - Accuracy from Training Set: 100% accuracy
 - Training Error: 1 - 1 = 0 (can view in notebook)
-<br>
+
 - Accuracy from Testing Set: 98.54% accuracy
 - Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook)
 <br>
