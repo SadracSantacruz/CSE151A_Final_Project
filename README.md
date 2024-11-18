@@ -3,7 +3,7 @@ We observed inconsistencies in file extensions across the images, with some usin
 ## Milestone 3 <br>
 *Note*: You may have to refresh the page if the ``milestone_3.ipynb`` notebook can't render (it'll load eventually). The notebook contains all major and finalized preprocessing, feature extraction, and our baseline model. <br>
 
-1: **Finish Major Preprocessing & Data Augmentation** <br>
+1: **Finish Major Preprocessing & Data Augmentation**
 - Scaling: Applied standardization to images into 224x224 dimensions
 - Grayscaling: Applied grayscaling to already-scaled images, also used for data augmentation
 - Rotating: Applied varying rotation degrees to images (from 15 to 75 degrees), also used for data augmentation
@@ -18,11 +18,12 @@ Our first model was a Multi-Class Support Vector Machine (SVM), where we perform
 <br>
 
 3: **Evaluate initial model and compare training vs. test error**<br>
-Accuracy from Training Set: 100% accuracy <br>
-Training Error: 1 - 1 = 0 (can view in notebook) <br>
+- Accuracy from Training Set: 100% accuracy
+- Training Error: 1 - 1 = 0 (can view in notebook)
 
-Accuracy from Testing Set: 98.54% accuracy. <br>
-Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook) <br>
+- Accuracy from Testing Set: 98.54% accuracy
+- Testing Error: 1 - 0.9854 = 0.0146 (can view in notebook)
+<br>
 
 Based on our initial model, it seemed to do really well in training and testing. However, we decided to test different models with different hyperparameters, and plot the respective model's training and test error based on the model's complexity. This is where we utilized Grid Search Cross-Validation to optimize the C parameter and kernel, and see which models tend to underfit or overfit. (can view in notebook)<br>
 
