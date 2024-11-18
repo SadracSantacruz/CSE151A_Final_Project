@@ -38,7 +38,8 @@ Despite this model working really well on the given dataset, we want to try stat
   [Milestone 3 Notebook](https://github.com/SadracSantacruz/CSE151A_Final_Project/blob/Milestone3/milestone_3.ipynb)
 <br>
 
-6. **Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?**<br>
+6. **Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?**
+<br>
 Our first model, a Multi-Class Support Vector Machine (SVM), showed strong performance with 100% accuracy on the training set and 98.54% accuracy on the testing set. While the model performed well overall, the slight discrepancy between training and testing accuracy suggests marginal overfitting, where the model might be too specialized to the training data.
 <br>
 Given that hyperparameter tuning was already applied using Grid Search Cross-Validation to optimize the C parameter and kernel, further improvements could focus on:
