@@ -58,14 +58,14 @@ The next step would be to transition to CNNs, which are typically better suited 
 <br>
 
 ## Milestone 4 <br>
-1: **Training Second Model (found in Milestone 4 Notebook)**
+1: **Training Second Model (found in Milestone 4 Notebook)** <br>
 For our second model, we decided to implement K-Nearest Neighbors (KNN), as it differs significantly from the previous SVM model. In the Milestone 4 Notebook, you'll find that we fine-tuned the model using grid search to optimize hyperparameters. The best hyperparameters were:
 - k = 3 (num. neighbors)
 - distance metric: Euclidean
 - weighting: distsance-based
 - algorithm: auto
 
-2: **Evaluating Model and Comparing Training vs. Test Error (also found in MS4 notebook):
+2: **Evaluating Model and Comparing Training vs. Test Error (also found in MS4 notebook)** <br>
 - Training Accuracy: 100%
   - Training Error: 0%
   - Training error suggests the KNN model fits the training data perfectly but may indicate potential overfitting on the training set
