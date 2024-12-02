@@ -60,6 +60,8 @@ The next step would be to transition to CNNs, which are typically better suited 
 <br>
 
 ## Milestone 4 <br>
+*Note*: Take a look at our ``milestone_4.ipynb`` notebook linked to this branch! (you may have to refresh a couple times for it to load)
+<br>
 1: **Training Second Model (found in Milestone 4 Notebook)** <br>
 For our second model, we decided to implement K-Nearest Neighbors (KNN), as it differs significantly from the previous SVM model. In the Milestone 4 Notebook, you'll find that we fine-tuned the model using grid search to optimize hyperparameters. The best hyperparameters were:
 - k = 3 (num. neighbors)
@@ -108,4 +110,4 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
 Since we are working with image classification of multiple classes, we can't directly calculate FP and FN from our test set. Here is our classification report of our fine-tuned KNN model on our test data: <br>
 <img width="490" alt="Screenshot 2024-12-01 at 11 39 39 PM" src="https://github.com/user-attachments/assets/29f246a9-39aa-4925-863e-1638d87e4e91">
 <br>
-
+The classification report shows high precision across all classes, indicating a low rate of false positives, such as Class 1 with a precision of 0.90, where misclassifications are relatively rare. However, Class 2 (Truck) has the lowest recall (~84%), suggesting that many true trucks are misclassified as other vehicle types (false negatives). Improving recall for Class 2 could significantly enhance overall model accuracy.
