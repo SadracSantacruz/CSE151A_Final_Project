@@ -54,3 +54,7 @@ Given that hyperparameter tuning was already applied using Grid Search Cross-Val
 <br>
 <br>
 The next step would be to transition to CNNs, which are typically better suited for image classification tasks and can more effectively capture complex, hierarchical features in the data, potentially leading to improved testing accuracy and model robustness.
+<br>
+<br>
+## Milestone 4 <br>
+
