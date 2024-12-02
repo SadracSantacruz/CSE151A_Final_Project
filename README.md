@@ -66,6 +66,7 @@ For our second model, we decided to implement K-Nearest Neighbors (KNN), as it d
 - algorithm: auto
 
 2: **Evaluating Model and Comparing Training vs. Test Error (also found in MS4 notebook)** <br>
+We will be using the results of the fine-tuned KNN model.
 - Training Accuracy: 100%
   - Training Error: 0%
   - Training error suggests the KNN model fits the training data perfectly but may indicate potential overfitting on the training set
@@ -74,3 +75,7 @@ For our second model, we decided to implement K-Nearest Neighbors (KNN), as it d
 - Performance Metrics on Test Set for KNN:
   - Precision and recall for all classes are high, and F1-scores are above 0.89.
   - It's important to note that **Class 2: Truck** had the lowest recall at roughly 84%, indicating a tendency for false negatives in this class.
+
+3: **Where Does Our Model Fit in the Fitting Graph? What Are Some Other Models We Are Thinking Of and Why?
+![image](https://github.com/user-attachments/assets/6f1bbb09-a27f-49ad-aea4-78029e9872f6)
+
