@@ -87,6 +87,7 @@ We will be using the results of the fine-tuned KNN model.
 <br>
 Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits in the overfitting region of the fitting graph, as it achieves perfect training accuracy (0 training error) but has a noticeable gap with test error (~0.05). Smaller k values and distance weighting seem to prioritize localized patterns, leading to overfitting by focusing too closely on training data. Conversely, models with larger k values (e.g., k=15) and algorithms other than ``auto`` to compute nearest neighbors tend to underfit, as both training and test errors are higher due to overly smoothed decision boundaries. Balanced models, however, such as k=3 and k=5, distance weighting, euclidean distance, and ``auto`` algorithms achieve low and close training/test errors, which seem to be a better balance between fit and generalization. Moving forward, we plan to further fine-tune and investigate our baseline and second model, SVM and KNN, respectively. If time permits, we also plan to explore pretrained CNN's such as Resnet50 and ensemble methods like Random Forests or Gradient Boosting. Additionally, we could also play around with dimensionality reduction techniques like PCA to improve embedding quality and reduce noise, further enhancing model performance.
 <br>
+<br>
 4: **Update README.md to Include New Work and Provide Updates** <br>
 - Our README.md for this Milestone is currently being updated as we're typing this :)
 - New work and updates have been added to the Milestone4 branch which you can view.
@@ -107,7 +108,7 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
   - Dimensionality Reduction (PCA, SVD) to reduce noise in our high-dimensional embeddings
   - Ensemble learning that utilizes both KNN and SVM
   - Addressing class-specific issues (such as Class Truck) with targetted feature engineering for that class
-<br>
+
 6: **Provide Predictions of Correct and FP and FN from Test Set** <br>
 Since we are working with image classification of multiple classes, we can't directly calculate FP and FN from our test set. Here is our classification report of our fine-tuned KNN model on our test data: <br>
 <img width="490" alt="Screenshot 2024-12-01 at 11 39 39 PM" src="https://github.com/user-attachments/assets/29f246a9-39aa-4925-863e-1638d87e4e91">
