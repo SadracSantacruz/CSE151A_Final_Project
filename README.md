@@ -82,3 +82,25 @@ We will be using the results of the fine-tuned KNN model.
 <br>
 ![image](https://github.com/user-attachments/assets/6f1bbb09-a27f-49ad-aea4-78029e9872f6)
 <br>
+Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits in the overfitting region of the fitting graph, as it achieves perfect training accuracy (0 training error) but has a noticeable gap with test error (~0.05). Smaller k values and distance weighting seem to prioritize localized patterns, leading to overfitting by focusing too closely on training data. Conversely, models with larger k values (e.g., k=15) and algorithms other than ``auto`` to compute nearest neighbors tend to underfit, as both training and test errors are higher due to overly smoothed decision boundaries. Balanced models, however, such as k=3 and k=5, distance weighting, euclidean distance, and ``auto`` algorithms achieve low and close training/test errors, which seem to be a better balance between fit and generalization. Moving forward, we plan to further fine-tune and investigate our baseline and second model, SVM and KNN, respectively. If time permits, we also plan to explore pretrained CNN's such as Resnet50 and ensemble methods like Random Forests or Gradient Boosting. Additionally, we could also play around with dimensionality reduction techniques like PCA to improve embedding quality and reduce noise, further enhancing model performance.
+<br>
+4: **Update README.md to Include New Work and Provide Updates** <br>
+- Our README.md for this Milestone is currently being updated as we're typing this :)
+- New work and updates have been added to the Milestone4 branch which you can view.
+- All code and notebooks have been added for Milestone 4 (view the ``milestone_4.ipynb`` notebook linked to this branch).
+<br>
+5: **Conclusion of 2nd Model, Improvements**: <br>
+- Strengths:
+  - KNN effectively classifies data with high accuracy (roughly 94.38% test accuracy)
+  - Performs well on most classes (with F1-scores > 0.94), and is computationally simple to implement
+- Weaknesses:
+  - Model shows signs of overfitting, as some models during grid-search displayed perfect training accuracy but slightly higher test error
+  - ``Class 2 (Truck)`` has a lower recall in comparison to other classes at roughly 84%, meaning this class is more prone to more false negatives
+- Comparison to SVM model (first model):
+  - Our SVM model, seemingly enough, seems to outperform KNN in generalization, achieving higher test accuracy and less testing error
+  - KNN's performance, while very strong, is marginally less robust in comparison to our SVM model
+- Potential Improvements:
+  - Dimensionality Reduction (PCA, SVD) to reduce noise in our high-dimensional embeddings
+  - Ensemble learning that utilizes both KNN and SVM
+  - Addressing class-specific issues (such as Class Truck) with targetted feature engineering for that class
+<br>
