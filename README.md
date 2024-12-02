@@ -62,6 +62,7 @@ The next step would be to transition to CNNs, which are typically better suited 
 ## Milestone 4 <br>
 *Note*: Take a look at our ``milestone_4.ipynb`` notebook linked to this branch! (you may have to refresh a couple times for it to load)
 <br>
+<br>
 1: **Training Second Model (found in Milestone 4 Notebook)** <br>
 For our second model, we decided to implement K-Nearest Neighbors (KNN), as it differs significantly from the previous SVM model. In the Milestone 4 Notebook, you'll find that we fine-tuned the model using grid search to optimize hyperparameters. The best hyperparameters were:
 - k = 3 (num. neighbors)
@@ -91,7 +92,8 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
 - New work and updates have been added to the Milestone4 branch which you can view.
 - All code and notebooks have been added for Milestone 4 (view the ``milestone_4.ipynb`` notebook linked to this branch).
 <br>
-5: **Conclusion of 2nd Model, Improvements** <br>
+5: **Conclusion of 2nd Model, Improvements**
+<br>
 - Strengths:
   - KNN effectively classifies data with high accuracy (roughly 94.38% test accuracy)
   - Performs well on most classes (with F1-scores > 0.94), and is computationally simple to implement
