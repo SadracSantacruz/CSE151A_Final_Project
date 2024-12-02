@@ -31,6 +31,8 @@ Based on our initial model, it seemed to do really well in training and testing.
 
 4: **Answer the questions: Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?** 
 <br>
+![image](https://github.com/user-attachments/assets/05fdfb65-82c2-4c94-940d-bcfe6d3889d3)
+<br>
 Our model seems to fit nicely when the model's hyperparameters are set to C=1 and kernel=linear. These hyperparameters have direct influence on the model's complexity. We especially found that models with a kernel set to RBF and a growing C value tend to overfit on the data, as it performs well with little to no error on our training data, but does worse on our testing data, meaning that these hyperparameters do a bad job generalizing to our unseen testing data.
 <br>
 <br>
@@ -76,6 +78,7 @@ We will be using the results of the fine-tuned KNN model.
   - Precision and recall for all classes are high, and F1-scores are above 0.89.
   - It's important to note that **Class 2: Truck** had the lowest recall at roughly 84%, indicating a tendency for false negatives in this class.
 
-3: **Where Does Our Model Fit in the Fitting Graph? What Are Some Other Models We Are Thinking Of and Why?
+3: **Where Does Our Model Fit in the Fitting Graph? What Are Some Other Models We Are Thinking Of and Why?**
+<br>
 ![image](https://github.com/user-attachments/assets/6f1bbb09-a27f-49ad-aea4-78029e9872f6)
-
+<br>
