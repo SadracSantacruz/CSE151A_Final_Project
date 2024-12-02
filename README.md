@@ -103,4 +103,3 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
   - Dimensionality Reduction (PCA, SVD) to reduce noise in our high-dimensional embeddings
   - Ensemble learning that utilizes both KNN and SVM
   - Addressing class-specific issues (such as Class Truck) with targetted feature engineering for that class
-<br>
