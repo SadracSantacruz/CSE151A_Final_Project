@@ -93,6 +93,7 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
 - New work and updates have been added to the Milestone4 branch which you can view.
 - All code and notebooks have been added for Milestone 4 (view the ``milestone_4.ipynb`` notebook linked to this branch).
 <br>
+
 5: **Conclusion of 2nd Model, Improvements**
 <br>
 - Strengths:
@@ -110,6 +111,7 @@ Our fine-tuned KNN model with k=3, distance weighting, and euclidean metric fits
   - Addressing class-specific issues (such as Class Truck) with targetted feature engineering for that class
 <br>
 <br>
+
 6: **Provide Predictions of Correct and FP and FN from Test Set** <br>
 Since we are working with image classification of multiple classes, we can't directly calculate FP and FN from our test set. Here is our classification report of our fine-tuned KNN model on our test data: <br>
 <img width="490" alt="Screenshot 2024-12-01 at 11 39 39 PM" src="https://github.com/user-attachments/assets/29f246a9-39aa-4925-863e-1638d87e4e91">
