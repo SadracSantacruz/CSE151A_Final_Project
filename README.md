@@ -58,4 +58,19 @@ The next step would be to transition to CNNs, which are typically better suited 
 <br>
 
 ## Milestone 4 <br>
-test
+1: **Training Second Model (found in Milestone 4 Notebook)**
+For our second model, we decided to implement K-Nearest Neighbors (KNN), as it differs significantly from the previous SVM model. In the Milestone 4 Notebook, you'll find that we fine-tuned the model using grid search to optimize hyperparameters. The best hyperparameters were:
+- k = 3 (num. neighbors)
+- distance metric: Euclidean
+- weighting: distsance-based
+- algorithm: auto
+
+2: **Evaluating Model and Comparing Training vs. Test Error (also found in MS4 notebook):
+- Training Accuracy: 100%
+  - Training Error: 0%
+  - Training error suggests the KNN model fits the training data perfectly but may indicate potential overfitting on the training set
+- Testing Accuracy: 94.38%
+  - Testing error = roughly 5.6%, which is slightly higher than our baseline SVM model from MS3, which was around 1%
+- Performance Metrics on Test Set for KNN:
+  - Precision and recall for all classes are high, and F1-scores are above 0.89.
+  - It's important to note that **Class 2: Truck** had the lowest recall at roughly 84%, indicating a tendency for false negatives in this class.
