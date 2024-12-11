@@ -172,10 +172,22 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
 ## 4. **Results**
 
 ### 4.1 **Data Exploration Results**
-- Number of Classes: 4
-- Total Number of Images: 400
-- Example Image Dimensions: 82 unique for Bus, 71 for Car, 74 for Motorcycle, and 78 for Truck.
+- Class Distribution: 4 Classes, 100 Images Per Class, 400 Total. See Distribution Below (can also see in "Figures"):
+![image](https://github.com/user-attachments/assets/12f06076-98b8-41e6-af1f-5ab455e56578)
+- Number of Image Dimensions: 82 unique for Bus, 71 for Car, 74 for Motorcycle, and 78 for Truck. We did this to see if standardizing was necessary (it was!).
+  ```
+   Number of unique image dimensions for Bus: 82
+   Number of unique image dimensions for Car: 71
+   Number of unique image dimensions for motorcycle: 74
+   Number of unique image dimensions for Truck: 78
+  ```
+- Example Images of Each Class to See Our Data (can also see in "Figures"):
+![image](https://github.com/user-attachments/assets/c1efbd24-b440-4694-aa10-3f85d2766278)
 
+### 4.2 **Preprocessing & Data Augmentation Results**
+The results of our preprocessing and data augmentation steps can be visualized in the [Figures section](#2-figures) section. Here are the highlights:
+- Data Uniformity: All images were resized to 224x224 pixels, standardizing their dimensions
+- Diversity Through Augmentation: Grayscale conversion, rotation, and horizontal flipping enhanced the dataset's variability.
 ### 4.2 **Baseline Model: Multi-Class SVM**
 - Training Accuracy: 1.0
 - Testing Accuracy: 98.5%
@@ -189,6 +201,76 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
 - Confusion Matrix:
   - Class 0: Precision = 0.94, Recall = 0.97
   - Class 1: Precision = 0.95, Recall = 0.99
+
+
+### 3.2 **Preprocessing & Data Augmentation** (see these preprocessed image examples in "**Figures**" Section)
+- **Image Scaling**: Resized all images to 224x224 pixels.
+- **Grayscaling**: Converted images to grayscale.
+- **Rotation**: Applied rotations of 15°, 30°, 45°, 60°, and 75°.
+- **Flipping**: Horizontally flipped images.
+- **Feature Extraction**: Used ResNet50 to generate embeddings (to feed into models that require numerical representation!). See how we generated these embeddings (code below):
+
+Preprocessing ensures uniformity in image size, format, and diversity, enabling the model to focus on relevant features for vehicle classification. Augmenting our data also increases data diversity, allowing models to generalize better to varying real-world scenarios (different angles, lighting, orientation). These steps are crucial to enhance the model's vehicle classification performance, ensuring robustness and improved accuracy.
+
+### 3.3 **Model 1: Multi-Class SVM**
+Justification: We chose this model due to its effectiveness in handling high-dimensional data (in this case, our ResNet50 embeddings) and its ability to create clear decision boundaries for classification tasks. By leveraging a linear kernel and the One-vs-Rest approach, it provided a robust baseline for separating vehicle types based on the extracted feature embeddings. Its computational efficiency during training and prediction made it a suitable choice for this problem.
+- Hyperparameters Before Tuning:
+  - Kernel: Linear
+  - Decision Function: One-vs-Rest (OVR)
+  - Regularization (C): Not specified (default is set to `C=1`)
+- Hyperparameters After Tuning (Grid Search):
+  - Kernel: Linear
+  - Decision Function: One-vs-Rest (OVR)
+  - Regularization (C): 0.1
+  ```python
+   from sklearn.model_selection import GridSearchCV
+   # testing different hyperparameters
+   param_grid = {
+       'C': [0.1, 1, 10, 100],
+       'kernel': ['linear', 'rbf'],
+       'decision_function_shape': ['ovr']
+   }
+   
+   # grid search cross-validation to find best hyperparameters for SVM
+   grid_search = GridSearchCV(SVC(), param_grid, cv=5, scoring='accuracy', return_train_score=True)
+   grid_search.fit(X_train_scaled, y_train)
+   
+   best_params = grid_search.best_params_
+  ```
+Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search as it fetched the performance out of all combinations. A linear kernel was chosen because the ResNet50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
+
+### 3.4 **Model 2: K-Nearest Neighbor (KNN)**
+Justification: We chose this model for its simplicity and effectiveness in leveraging local patterns within the data, making it ideal for handling feature spaces where classes might overlap. Its distance-based decision-making allows it to classify vehicle types by considering similarity to nearby samples/data. Additionally, it offers flexibility through hyperparameter tuning, such as the number of neighbors and distance metrics (as you see below).
+- Hyperparameters Before Tuning:
+  - Number of Neighbors: 5 (default)
+  - Weight Function: Uniform (default)
+  - Metric: Minkowski (default)
+  - Algorithm: Auto (default)
+    Note that these values were not explicitly specified when creating our baseline KNN. A KNN in scikit-learn without any specified
+    hyperparameters (which is what we did for our baseline) will default to the values above.
+- Hyperparameters After Tuning (Grid Search):
+  - Number of Neighbors: 3
+  - Weight Function: Distance
+  - Metric: Euclidean
+  - Algorithm: Auto
+  ```python
+   # testing different hyperparameters
+   param_grid = {
+       'n_neighbors': [3, 5, 7, 10, 12, 15],  
+       'weights': ['uniform', 'distance'],  
+       'metric': ['euclidean', 'manhattan'],
+       'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute'],
+   }
+   
+   # grid search cross-validation to find best hyperparameters for KNN
+   grid_search = GridSearchCV(KNeighborsClassifier(), param_grid, cv = 5, scoring = 'accuracy', return_train_score = True)
+   grid_search.fit(X_train_scaled, y_train)
+   
+   # get best hyperparameters
+   best_params = grid_search.best_params_
+  ```
+Why These Parameters: After performing Grid Search, these hyperparameters for KNN were selected for their optimal performance in classifying vehicle types. A lower number of neighbors (3) was chosen to allow the model to focus on more localized patterns, which is useful for distinguishing subtle differences between vehicle classes. The distance-based weight function prioritized closer neighbors, giving them more influence in the classification. The Euclidean distance metric was selected as it effectively measures straight-line similarity in the ResNet50 embedding space, and the auto algorithm allowed scikit-learn to choose the most efficient method for nearest-neighbor searches based on the dataset size and structure.
+
 
 ## 5. **Discussion**
 
