@@ -30,7 +30,7 @@ This project was also a fun execution of our interests as a group, as we all par
    <br>
 **Note that there will be additional figures throughout the write-up to show training vs. testing errors, evaluation metrics, confusion matrices, etc.**
 
-## 3. **Methods**
+## 3. **Methods** :scientist:
 
 ### 3.1 **Data Exploration**
 - Dataset: Vehicle Type Recognition Dataset from Kaggle
@@ -182,7 +182,7 @@ Take a look at how other combinations of hyperparameters performed, and see any 
 ![image](https://github.com/user-attachments/assets/41a6a2e0-adc7-4b23-a057-66e4815f4a37)
 
 
-## 4. **Results**
+## 4. **Results** :mag_right:
 
 ### 4.1 **Data Exploration Results**
 - Class Distribution: 4 Classes, 100 Images Per Class, 400 Total. See Distribution Below (can also see in [Figures](#figures)):
