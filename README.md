@@ -373,4 +373,37 @@ In hindsight, several improvements could have enhanced our results:
 In conclusion, our project demonstrates the strengths and limitations of different models while emphasizing the importance of thoughtful preprocessing and model selection. While our results were promising, they are only the beginning. Future work should focus on addressing the challenges posed by real-world variability, scaling solutions, and exploring innovative, modern, state-of-the-art methods to push the boundaries and further enhance vehicle type recognition.
 
 ## 6. **Statement of Collaboration** :clap:
-1. Name: Adrian Apsay | Title: Project Team Lead | Contribution: Laid out plans for each milestone up to the final submission. Managed and communicated with team members accordingly. Major code contributor. Major write-up contributor.
+**Team Member 1**: <br>
+Name: Adrian Apsay <br>
+Title: Project Team Lead <br>
+Contribution: Laid out plans for each milestone up until the final submission. Managed and communicated with team members accordingly. Major code contributor. Major write-up contributor.
+<br>
+<br>
+**Team Member 2**: <br>
+Name: <br>
+Title: <br>
+Contribution: 
+<br>
+<br>
+**Team Member 3**: <br>
+Name: <br>
+Title: <br>
+Contribution: 
+<br>
+<br>
+**Team Member 4**: <br>
+Name: <br>
+Title: <br>
+Contribution: 
+<br>
+<br>
+**Team Member 5**: <br>
+Name: <br>
+Title: <br>
+Contribution: 
+<br>
+<br>
+**Team Member 6**: <br>
+Name: <br>
+Title: <br>
+Contribution: 
