@@ -380,9 +380,9 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 2**: <br>
-**Name**: <br>
-**Title**: <br>
-**Contribution**: 
+**Name**: Zander Vilaysane <br>
+**Title**: Domain Expert <br>
+**Contribution**: Provided insight to automotive (domain) and image (pixel) characteristics necessary for preprocessing/classification. Helped facilitate discussions on potential approaches and debugging. Active strongly in meeting discussions and write-up support.
 <br>
 <br>
 **Team Member 3**: <br>
