@@ -7,6 +7,7 @@ A robust, high-performing predictive model in this domain could revolutionize ho
 - **Traffic Trends**: Classifying vehicles in real-time allows authorities to gather data on the types of vehicles using specific roads at different times (buses during rush hour, trucks at night, etc.). It also can identify what cars exist in different hours of traffic, high-usage vehicle types at a certain hour, etc. which can be used to develop better traffic management strategies.
 - **Road Layouts**: Vehicle classification could be used to retrieve what roads are frequently used by certain vehicles. An example of this would be heavy trucks on certain roads, calling for stronger pavement or wider lanes. This type of classification can also be used to optimize traffic lights (i.e. what kind of vehicles are passing by a certain light?)
 - **Public Transport System Design**: Classification can help with what routes are car/truck/motorcycle-dominated, and what routes have a low utilization of buses. This can help guide where public transit systems should be expanded, adjusted, or even implemented. It can also help estimate the reliance on personal vehicles versus public transport, being able to identify areas where transit investments can reduce congestion and emissions.
+<br>
 This project was also a fun execution of our interests as a group, as we all particularly love cars.
 
 ## 2. **Figures** :chart_with_upwards_trend:
