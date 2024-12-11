@@ -138,7 +138,7 @@ Justification: We chose this model due to its effectiveness in handling high-dim
    
    best_params = grid_search.best_params_
   ```
-Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search Cross-Validation as it fetched the performance out of all combinations. A linear kernel was chosen because the ResNet 50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
+Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search Cross-Validation as it fetched the best performance out of all combinations. A linear kernel was chosen because the ResNet 50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
 <br>
 <br>
 Take a look at how other combinations of hyperparameters performed, and see any signs of underfitting/overfitting:
