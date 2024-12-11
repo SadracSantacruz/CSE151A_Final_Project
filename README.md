@@ -10,6 +10,7 @@ A robust, high-performing predictive model in this domain could revolutionize ho
 <br>
 This project was also a fun execution of our interests as a group, as we all particularly love cars.
 
+<a name="figures"></a>
 ## 2. **Figures** :chart_with_upwards_trend:
 
 1. **Class Distribution**: Here is a distribution showing the number of images per vehicle class. <br>
