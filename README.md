@@ -380,27 +380,27 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 2**: <br>
+**Name**: Ethan Flores <br>
+**Title**: Lead Programmer and Developer <br>
+**Contribution**: Played a key role in designing and implementing the workflow and codebase for the project. Contributed significantly to developing models and data preparation at each milestone. 
+<br>
+<br>
+**Team Member 3**: <br>
 **Name**: Zander Vilaysane <br>
 **Title**: Domain Expert <br>
 **Contribution**: Provided insight to automotive (domain) and image characteristics necessary for classification aspects. Helped facilitate discussions on potential approaches and debugging. Focuses were in meeting discussions, scheduling coordination, and write-up support.
 <br>
 <br>
-**Team Member 3**: <br>
+**Team Member 4**: <br>
 **Name**: Sadrac Santacruz <br>
 **Title**: Data Scientist <br>
 **Contribution**: Provided insights and facilitated discussions on potential errors and mistakes encountered during the project. Focused on improving the write-up, facilitating productive meeting discussions, and ensuring the setup of necessary tools for the project's success.
 <br>
 <br>
-**Team Member 4**: <br>
+**Team Member 5**: <br>
 **Name**: Hieu Pham<br>
 **Title**: Coder/Writer<br>
 **Contribution**: Contributed significant code and research to guide development. Contributed largely to write up content and formatting. 
-<br>
-<br>
-**Team Member 5**: <br>
-**Name**: Ethan Flores <br>
-**Title**: Lead Programmer and Developer <br>
-**Contribution**: Played a key role in designing and implementing the workflow and codebase for the project. Contributed significantly to developing models and data preparation at each milestone. 
 <br>
 <br>
 **Team Member 6**: <br>
