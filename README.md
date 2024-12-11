@@ -196,6 +196,7 @@ The results of our preprocessing and data augmentation steps can be visualized i
 ### 4.3 **Model 1: Multi-Class SVM**
 _Non-Tuned Model Results_
 Training Set:
+```
 Error for Training Set: 0.0
 Training Accuracy for SVM: 1.0
               precision    recall  f1-score   support
@@ -208,7 +209,25 @@ Training Accuracy for SVM: 1.0
     accuracy                           1.00      1920
    macro avg       1.00      1.00      1.00      1920
 weighted avg       1.00      1.00      1.00      1920
+```
+Testing Set:
+```
+Error for Testing Set: 0.015
+Testing Accuracy for SVM: 0.9854166666666667
+              precision    recall  f1-score   support
 
+           0       0.98      0.98      0.98       124
+           1       1.00      0.97      0.99       119
+           2       0.97      0.98      0.98       101
+           3       0.99      1.00      1.00       136
+
+    accuracy                           0.99       480
+   macro avg       0.98      0.98      0.98       480
+weighted avg       0.99      0.99      0.99       480
+
+
+```
+_Tuned Model Results_
 
 
 Tuned Model Results:
