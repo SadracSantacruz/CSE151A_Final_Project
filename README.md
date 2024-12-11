@@ -371,3 +371,6 @@ In hindsight, several improvements could have enhanced our results:
 - **Exploration of Other Models**: Implementing ensemble methods or more advanced algorithms like Random Forests or Gradient-Boosted Trees could provide alternative classification strategies.
 
 In conclusion, our project demonstrates the strengths and limitations of different models while emphasizing the importance of thoughtful preprocessing and model selection. While our results were promising, they are only the beginning. Future work should focus on addressing the challenges posed by real-world variability, scaling solutions, and exploring innovative, modern, state-of-the-art methods to push the boundaries and further enhance vehicle type recognition.
+
+## 6. **Statement of Collaboration** :clap:
+1. Name: Adrian Apsay | Title: Project Team Lead | Contribution: Laid out plans for each milestone up to the final submission. Managed and communicated with team members accordingly. Major code contributor. Major write-up contributor.
