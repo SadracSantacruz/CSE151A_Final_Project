@@ -67,9 +67,10 @@ This project was also a fun execution of our interests as a group, as we all par
    Number of unique image dimensions for motorcycle: 74
    Number of unique image dimensions for Truck: 78
    ```
-  - Visualized example images for each class (see "Figures")
+  - Visualized example images for each class (see [Figures](#figures))
 
-### 3.2 **Preprocessing & Data Augmentation** (see these preprocessed image examples in "**Figures**" Section)
+### 3.2 **Preprocessing & Data Augmentation**
+**Note**: You can see these preprocessed image examples in [Figures](#figures) Section
 - **Image Scaling**: Resized all images to 224x224 pixels.
 - **Grayscaling**: Converted images to grayscale.
 - **Rotation**: Applied rotations of 15°, 30°, 45°, 60°, and 75°.
@@ -173,7 +174,7 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
 ## 4. **Results**
 
 ### 4.1 **Data Exploration Results**
-- Class Distribution: 4 Classes, 100 Images Per Class, 400 Total. See Distribution Below (can also see in "Figures"):
+- Class Distribution: 4 Classes, 100 Images Per Class, 400 Total. See Distribution Below (can also see in [Figures](#figures)):
 ![image](https://github.com/user-attachments/assets/12f06076-98b8-41e6-af1f-5ab455e56578)
 - Number of Image Dimensions: 82 unique for Bus, 71 for Car, 74 for Motorcycle, and 78 for Truck. We did this to see if standardizing was necessary (it was!).
   ```
@@ -182,7 +183,7 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
    Number of unique image dimensions for motorcycle: 74
    Number of unique image dimensions for Truck: 78
   ```
-- Example Images of Each Class to See Our Data (can also see in "Figures"):
+- Example Images of Each Class to See Our Data (can also see in [Figures](#figures)):
 ![image](https://github.com/user-attachments/assets/c1efbd24-b440-4694-aa10-3f85d2766278)
 
 ### 4.2 **Preprocessing & Data Augmentation Results**
