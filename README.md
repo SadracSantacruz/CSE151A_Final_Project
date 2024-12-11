@@ -273,19 +273,65 @@ Confusion Matrix (tuned SVM): <br>
 _Non-Tuned Model Results_ <br>
 Training Set:
 ```
+Error for Training Set: 0.014
+Training Accuracy for Baseline KNN: 0.9859375
+              precision    recall  f1-score   support
 
+           0       0.98      0.99      0.98       476
+           1       0.98      1.00      0.99       481
+           2       0.99      0.96      0.98       499
+           3       1.00      0.99      1.00       464
+
+    accuracy                           0.99      1920
+   macro avg       0.99      0.99      0.99      1920
+weighted avg       0.99      0.99      0.99      1920
 ```
 Testing Set:
 ```
+Error for Testing Set: 0.037
+Testing Accuracy for Baseline KNN: 0.9625
+              precision    recall  f1-score   support
 
+           0       0.94      0.97      0.95       124
+           1       0.95      0.99      0.97       119
+           2       0.96      0.88      0.92       101
+           3       1.00      0.99      1.00       136
+
+    accuracy                           0.96       480
+   macro avg       0.96      0.96      0.96       480
+weighted avg       0.96      0.96      0.96       480
 ```
 _Tuned Model Results_ <br>
 Training Set:
 ```
+Error for Training Set: 0.0
+Training Accuracy for Tuned KNN: 1.0
+              precision    recall  f1-score   support
 
+           0       1.00      1.00      1.00       476
+           1       1.00      1.00      1.00       481
+           2       1.00      1.00      1.00       499
+           3       1.00      1.00      1.00       464
+
+    accuracy                           1.00      1920
+   macro avg       1.00      1.00      1.00      1920
+weighted avg       1.00      1.00      1.00      1920
 ```
 Testing Set:
 ```
+Error for Testing Set: 0.029
+Testing Accuracy for Tuned KNN: 0.9708333333333333
+              precision    recall  f1-score   support
+
+           0       0.95      0.98      0.96       124
+           1       0.96      1.00      0.98       119
+           2       0.97      0.90      0.93       101
+           3       1.00      0.99      1.00       136
+
+    accuracy                           0.97       480
+   macro avg       0.97      0.97      0.97       480
+weighted avg       0.97      0.97      0.97       480
+
 
 ```
 Confusion Matrix (tuned KNN): <br>
