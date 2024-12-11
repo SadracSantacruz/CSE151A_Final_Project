@@ -140,6 +140,7 @@ Justification: We chose this model due to its effectiveness in handling high-dim
   ```
 Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search Cross-Validation as it fetched the performance out of all combinations. A linear kernel was chosen because the ResNet 50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
 <br>
+<br>
 Take a look at how other combinations of hyperparameters performed, and see any signs of underfitting/overfitting:
 ![image](https://github.com/user-attachments/assets/7f81c088-1c1c-4973-a4d2-785c4bd8ff55)
 
@@ -175,6 +176,7 @@ Justification: We chose this model for its simplicity and effectiveness in lever
    best_params = grid_search.best_params_
   ```
 Why These Parameters: After performing Grid Search Cross-Validation, these hyperparameters for KNN were selected for their optimal performance in classifying vehicle types. A lower number of neighbors (3) was chosen to allow the model to focus on more localized patterns, which is useful for distinguishing subtle differences between vehicle classes. The distance-based weight function prioritized closer neighbors, giving them more influence in the classification. The Euclidean distance metric was selected as it effectively measures straight-line similarity in the ResNet 50 embedding space, and the auto algorithm allowed scikit-learn to choose the most efficient method for nearest-neighbor searches based on the dataset size and structure.
+<br>
 <br>
 Take a look at how other combinations of hyperparameters performed, and see any signs of underfitting/overfitting:
 ![image](https://github.com/user-attachments/assets/41a6a2e0-adc7-4b23-a057-66e4815f4a37)
@@ -232,8 +234,6 @@ Testing Accuracy for SVM: 0.9854166666666667
     accuracy                           0.99       480
    macro avg       0.98      0.98      0.98       480
 weighted avg       0.99      0.99      0.99       480
-
-
 ```
 _Tuned Model Results_ <br>
 Training Set:
@@ -250,8 +250,6 @@ Training Accuracy for Tuned SVM: 1.0
     accuracy                           1.00      1920
    macro avg       1.00      1.00      1.00      1920
 weighted avg       1.00      1.00      1.00      1920
-
-
 ```
 Testing Set:
 ```
@@ -268,75 +266,30 @@ Testing Accuracy for Tuned SVM: 0.9854166666666667
    macro avg       0.98      0.98      0.98       480
 weighted avg       0.99      0.99      0.99       480
 ```
-
+Confusion Matrix (tuned SVM):
+![image](https://github.com/user-attachments/assets/095303fc-5005-4b97-97fc-de447278bfe9)
 
 ### 4.4 **Model 2: KNN**
 _Non-Tuned Model Results_ <br>
 Training Set:
 ```
-Error for Training Set: 0.0
-Training Accuracy for SVM: 1.0
-              precision    recall  f1-score   support
 
-           0       1.00      1.00      1.00       476
-           1       1.00      1.00      1.00       481
-           2       1.00      1.00      1.00       499
-           3       1.00      1.00      1.00       464
-
-    accuracy                           1.00      1920
-   macro avg       1.00      1.00      1.00      1920
-weighted avg       1.00      1.00      1.00      1920
 ```
 Testing Set:
 ```
-Error for Testing Set: 0.015
-Testing Accuracy for SVM: 0.9854166666666667
-              precision    recall  f1-score   support
-
-           0       0.98      0.98      0.98       124
-           1       1.00      0.97      0.99       119
-           2       0.97      0.98      0.98       101
-           3       0.99      1.00      1.00       136
-
-    accuracy                           0.99       480
-   macro avg       0.98      0.98      0.98       480
-weighted avg       0.99      0.99      0.99       480
-
 
 ```
 _Tuned Model Results_ <br>
 Training Set:
 ```
-Error for Training Set (Tuned SVM): 0.0
-Training Accuracy for Tuned SVM: 1.0
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       476
-           1       1.00      1.00      1.00       481
-           2       1.00      1.00      1.00       499
-           3       1.00      1.00      1.00       464
-
-    accuracy                           1.00      1920
-   macro avg       1.00      1.00      1.00      1920
-weighted avg       1.00      1.00      1.00      1920
-
 
 ```
 Testing Set:
 ```
-Error for Testing Set (Tuned SVM): 0.015
-Testing Accuracy for Tuned SVM: 0.9854166666666667
-              precision    recall  f1-score   support
 
-           0       0.98      0.98      0.98       124
-           1       1.00      0.97      0.99       119
-           2       0.97      0.98      0.98       101
-           3       0.99      1.00      1.00       136
-
-    accuracy                           0.99       480
-   macro avg       0.98      0.98      0.98       480
-weighted avg       0.99      0.99      0.99       480
 ```
+Confusion Matrix (tuned KNN):
+![image](https://github.com/user-attachments/assets/48865307-c58e-44e7-b1f3-293c0856cd9b)
 
 ## 5. **Discussion**
 
