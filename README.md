@@ -392,9 +392,9 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 4**: <br>
-**Name**: <br>
-**Title**: <br>
-**Contribution**: 
+**Name**: Hieu Pham<br>
+**Title**: Coder/Writer<br>
+**Contribution**: Contributed significant code and research to guide development. Contributed largely to write up content and formatting. 
 <br>
 <br>
 **Team Member 5**: <br>
