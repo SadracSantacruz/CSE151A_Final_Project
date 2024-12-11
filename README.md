@@ -194,7 +194,7 @@ The results of our preprocessing and data augmentation steps can be visualized i
 - Feature Extraction by Converting Images into High-Dimensional Embeddings (using ResNet 50). See how we generated them in [Section 3.2](#embeddings), under "Feature Extraction".
 
 ### 4.3 **Model 1: Multi-Class SVM**
-_Non-Tuned Model Results_
+__Non-Tuned Model Results__
 - Training Accuracy: 1.0
 - Testing Accuracy: 98.5%
 - Confusion Matrix:
