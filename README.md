@@ -386,9 +386,9 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 3**: <br>
-**Name**: <br>
-**Title**: <br>
-**Contribution**: 
+**Name**: Sadrac Santacruz <br>
+**Title**: Data Scientist <br>
+**Contribution**: Provided insights and facilitated discussions on potential errors and mistakes encountered during the project. Focused on improving the write-up, facilitating productive meeting discussions, and ensuring the setup of necessary tools for the project's success.
 <br>
 <br>
 **Team Member 4**: <br>
