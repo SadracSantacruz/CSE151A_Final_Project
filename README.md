@@ -1,5 +1,5 @@
 # CSE 151A: Vehicle Type Recognition Project
-
+_Note_: If you want to take a look at our code, click [here](https://github.com/SadracSantacruz/CSE151A_Final_Project/blob/main/cse151afinalproj.ipynb). You may have to refresh a couple times for it to load properly.
 ## 1. **Introduction** :car:
 The goal of our project was to develop a machine learning system capable of recognizing vehicle types (Car, Motorcycle, Bus, and Truck) based on images. This problem was chosen due to its practical applications in areas such as traffic management, road infrastructure, and safer, smarter, efficient cities.
 
