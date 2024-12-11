@@ -194,7 +194,7 @@ The results of our preprocessing and data augmentation steps can be visualized i
 - Feature Extraction by Converting Images into High-Dimensional Embeddings (using ResNet 50). See how we generated them in [Section 3.2](#embeddings), under "Feature Extraction".
 
 ### 4.3 **Model 1: Multi-Class SVM**
-_Non-Tuned Model Results_
+_Non-Tuned Model Results_ <br>
 Training Set:
 ```
 Error for Training Set: 0.0
@@ -227,10 +227,40 @@ weighted avg       0.99      0.99      0.99       480
 
 
 ```
-_Tuned Model Results_
+_Tuned Model Results_ <br>
+Training Set:
+```
+Error for Training Set (Tuned SVM): 0.0
+Training Accuracy for Tuned SVM: 1.0
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       476
+           1       1.00      1.00      1.00       481
+           2       1.00      1.00      1.00       499
+           3       1.00      1.00      1.00       464
+
+    accuracy                           1.00      1920
+   macro avg       1.00      1.00      1.00      1920
+weighted avg       1.00      1.00      1.00      1920
 
 
-Tuned Model Results:
+```
+Testing Set:
+```
+Error for Testing Set (Tuned SVM): 0.015
+Testing Accuracy for Tuned SVM: 0.9854166666666667
+              precision    recall  f1-score   support
+
+           0       0.98      0.98      0.98       124
+           1       1.00      0.97      0.99       119
+           2       0.97      0.98      0.98       101
+           3       0.99      1.00      1.00       136
+
+    accuracy                           0.99       480
+   macro avg       0.98      0.98      0.98       480
+weighted avg       0.99      0.99      0.99       480
+```
+
 
 ### 4.4 **Model 2: KNN**
 - Training Accuracy: 98.6%
