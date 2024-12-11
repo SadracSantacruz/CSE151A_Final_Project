@@ -1,7 +1,7 @@
 # CSE 151A: Vehicle Type Recognition Project
 
 ## 1. **Introduction** :car:
-The goal of our project was to develop a machine learning system capable of recognizing vehicle types (Car, Motorcycle, Bus, and Truck) based on images. This problem was chosen due to its practical applications in areas such as traffic management, road infrastructure, and smarter, efficient cities.
+The goal of our project was to develop a machine learning system capable of recognizing vehicle types (Car, Motorcycle, Bus, and Truck) based on images. This problem was chosen due to its practical applications in areas such as traffic management, road infrastructure, and safer, smarter, efficient cities.
 
 A robust, high-performing predictive model in this domain could revolutionize how vehicles are monitored and classified, leading to smarter infrastructure planning and improved road safety. Such models could be integrated into intelligent traffic cameras for the following use cases:
 - **Traffic Trends**: Classifying vehicles in real-time allows authorities to gather data on the types of vehicles using specific roads at different times (buses during rush hour, trucks at night, etc.). It also can identify what cars exist in different hours of traffic, high-usage vehicle types at a certain hour, etc. which can be used to develop better traffic management strategies.
