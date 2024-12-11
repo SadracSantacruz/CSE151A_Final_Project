@@ -185,7 +185,7 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
 ![image](https://github.com/user-attachments/assets/c1efbd24-b440-4694-aa10-3f85d2766278)
 
 ### 4.2 **Preprocessing & Data Augmentation Results**
-The results of our preprocessing and data augmentation steps can be visualized in the [Figures section](#2-figures) section. Here are the highlights:
+The results of our preprocessing and data augmentation steps can be visualized in the [Figures](#2-figures) section. Here are the highlights:
 - Data Uniformity: All images were resized to 224x224 pixels, standardizing their dimensions
 - Diversity Through Augmentation: Grayscale conversion, rotation, and horizontal flipping enhanced the dataset's variability.
 ### 4.2 **Baseline Model: Multi-Class SVM**
