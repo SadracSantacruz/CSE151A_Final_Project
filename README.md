@@ -404,6 +404,6 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 6**: <br>
-**Name**: <br>
-**Title**: <br>
-**Contribution**: 
+**Name**: Hayden Dinh
+**Title**: Programmer/Writer
+**Contribution**: Supported other programmers and writers debugging and working alongside team members on the writeup. 
