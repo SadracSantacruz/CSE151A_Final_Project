@@ -398,9 +398,9 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 <br>
 <br>
 **Team Member 5**: <br>
-**Name**: <br>
-**Title**: <br>
-**Contribution**: 
+**Name**: Ethan Flores <br>
+**Title**: Lead Programmer and Developer <br>
+**Contribution**: Played a key role in designing and implementing the workflow and codebase for the project. Contributed significantly to developing models and data preparation at each milestone. 
 <br>
 <br>
 **Team Member 6**: <br>
