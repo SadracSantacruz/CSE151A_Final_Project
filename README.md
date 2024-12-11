@@ -191,7 +191,7 @@ Why These Parameters: After performing Grid Search, these hyperparameters for KN
 The results of our preprocessing and data augmentation steps can be visualized in the [Figures](#figures) section. Here are the highlights:
 - Data Uniformity: All images were resized to 224x224 pixels, standardizing their dimensions
 - Diversity Through Augmentation: Grayscale conversion, rotation, and horizontal flipping enhanced the dataset's variability.
-- Feature Extraction by Converting Images into High-Dimensional Embeddings (using ResNet 50). See how we generated them [here](#embeddings).
+- Feature Extraction by Converting Images into High-Dimensional Embeddings (using ResNet 50). See how we generated them [in Section 3.2](#embeddings), under "Feature Extraction".
 ### 4.2 **Baseline Model: Multi-Class SVM**
 - Training Accuracy: 1.0
 - Testing Accuracy: 98.5%
