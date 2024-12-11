@@ -338,28 +338,37 @@ Confusion Matrix (tuned KNN): <br>
 ![image](https://github.com/user-attachments/assets/48865307-c58e-44e7-b1f3-293c0856cd9b)
 
 ## 5. **Discussion**
+Our project’s journey into vehicle type recognition began with a simple goal: to classify vehicle images accurately into their respective categories (Car, Motorcycle, Bus, Truck). From the outset, our approach involved a thorough data exploration, preprocessing steps, and the implementation of machine learning models to address this problem effectively.
 
 ### 5.1 **Data Exploration and Preprocessing**
-The preprocessing steps standardized the dataset, enabling consistent input for the models. Data augmentation (scaling, flipping, etc.) effectively increased the dataset size and diversity.
+The exploration phase highlighted the importance of standardizing the dataset. The raw dataset had inconsistencies in image dimensions, which could have hampered model performance. By resizing all images to 224x224 pixels, we ensured consistency across inputs. Data augmentation techniques, including grayscale conversion, rotation, and flipping, diversified our dataset and increased its robustness to variations in real-world scenarios like lighting and orientation. The embeddings generated using ResNet 50 provided a high-dimensional feature space that was crucial for the models we used.
+<br>
+<br>
+However, one limitation was the relatively small dataset size (400 images across four classes). This limited the models' ability to generalize well, especially for real-world applications where diverse and dynamic environments are encountered. Additionally, the augmented dataset may still not fully mimic real-world variations like partial occlusions, weather effects, or extreme angles.
 
-### 5.2 **Baseline Model**
-The SVM baseline demonstrated remarkable accuracy with minimal error. Its ability to perfectly classify training data highlighted its suitability for high-dimensional feature spaces.
+### 5.2 Model Implementation and Results
+#### Multi-Class Support Vector Machine (SVM)
+The Support Vector Machine (SVM) with a linear kernel proved to be a robust baseline. Its ability to handle high-dimensional ResNet embeddings efficiently led to near-perfect classification results. The tuned hyperparameters, including a lower regularization parameter \( C = 0.1 \), allowed the SVM to generalize well without overfitting. The results were believable, as the high accuracy on both training and testing datasets aligned with the theoretical strengths of SVM in high-dimensional spaces.
+#### K-Nearest Neighbors (KNN)
+The K-Nearest Neighbors (KNN) model, while effective in leveraging local patterns, slightly underperformed compared to SVM. The tuned parameters (e.g., \( k=3 \), Euclidean distance) optimized its performance, but the inherent sensitivity of KNN to overlapping feature spaces led to minor misclassifications. This was evident in its slightly lower recall values for specific classes. Despite this, KNN’s simplicity and interpretability made it a valuable comparison model.
 
-### 5.3 **Final Model**
-The KNN model, while slightly less accurate than SVM, provided valuable insights into local classification strategies. However, it struggled with classes having overlapping feature spaces, as evidenced by slightly lower recall values.
-
-### 5.4 **Model Comparisons**
-The SVM’s linear kernel offered robust generalization, outperforming KNN in terms of both accuracy and computational efficiency during prediction.
-
-### 5.5 **Shortcomings**
-- Limited dataset size capped the models’ potential.
-- Real-world images might introduce complexities such as occlusions or varying lighting conditions not captured in the dataset.
+### 5.3 Shortcomings and Future Challenges
+One significant shortcoming was the limited dataset size and variability. Real-world images often contain noise, occlusions, and unpredictable variations, which were not fully captured in our dataset or augmentations. Additionally, our models relied on pre-extracted embeddings from ResNet 50 rather than training a custom deep learning model, which could potentially capture finer details specific to our classification task.
+<br>
+<br>
+Another limitation was the computational efficiency of KNN during prediction. While it performed reasonably well, its reliance on storing and comparing all training samples limits its scalability for larger datasets. Future solutions could involve integrating dimensionality reduction techniques or switching to more scalable algorithms.
+<br>
+<br>
+Lastly, while our evaluation metrics demonstrated strong performance, they do not account for edge cases or misclassifications in real-world scenarios. For example, how would the model perform if the dataset included ambiguous images (e.g., buses with advertisements that make them look like trucks)? These scenarios remain unexplored and pose challenges for practical deployment.
 
 ## 6. **Conclusion**
-The project showcased the effectiveness of machine learning models in vehicle type recognition. The SVM’s superior accuracy and efficiency made it the final choice. Future work could involve:
-- Using larger, more diverse datasets.
-- Exploring deep learning models like Convolutional Neural Networks (CNNs).
-- Fine-tuning augmentation techniques to better mimic real-world conditions.
+This project highlighted the potential of machine learning models for solving practical classification problems like vehicle type recognition. The SVM model emerged as the most effective approach due to its computational efficiency and strong performance in high-dimensional feature spaces. However, the KNN model also provided valuable insights into local patterns and alternative classification strategies.
+<br>
+<br>
+In hindsight, several improvements could have enhanced our results:
+- **Dataset Expansion**: Collecting a larger, more diverse dataset with real-world variations could improve the model’s robustness.
+- **Deep Learning Models**: Training a convolutional neural network (CNN) from scratch or fine-tuning a pre-trained model could capture more task-specific features.
+- **Context-Aware Classification**: Incorporating contextual information, such as vehicle surroundings or traffic conditions, could further refine classifications.
+- **Exploration of Other Models**: Implementing ensemble methods or more advanced algorithms like Random Forests or Gradient Boosted Trees could provide additional perspectives.
 
-In conclusion, this project highlighted the potential of machine learning in solving real-world classification problems while identifying avenues for improvement and future exploration.
-
+This project demonstrated the strengths and limitations of different models while emphasizing the importance of thoughtful preprocessing and model selection. While our results were promising, they are only the beginning. Future work should focus on addressing the challenges posed by real-world variability, scaling solutions, and exploring innovative methods to push the boundaries of vehicle type recognition.
