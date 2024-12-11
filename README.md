@@ -138,7 +138,7 @@ Justification: We chose this model due to its effectiveness in handling high-dim
    
    best_params = grid_search.best_params_
   ```
-Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search as it fetched the performance out of all combinations. A linear kernel was chosen because the ResNet 50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
+Why These Parameters: We decided to use these tuned hyperparameters for our SVM after Grid Search Cross-Validation as it fetched the performance out of all combinations. A linear kernel was chosen because the ResNet 50 embeddings are high-dimensional, and a linear boundary is often effective for such data. The One-vs-Rest approach allows the SVM to handle multi-class classification by training a separate binary classifier for each class. A lower C value of 0.1 was selected to prevent overfitting by allowing a softer margin and better generalization.
 
 ### 3.4 **Model 2: K-Nearest Neighbor (KNN)**
 Justification: We chose this model for its simplicity and effectiveness in leveraging local patterns within the data, making it ideal for handling feature spaces where classes might overlap. Its distance-based decision-making allows it to classify vehicle types by considering similarity to nearby samples/data. Additionally, it offers flexibility through hyperparameter tuning, such as the number of neighbors and distance metrics (as you see below).
@@ -170,7 +170,7 @@ Justification: We chose this model for its simplicity and effectiveness in lever
    # get best hyperparameters
    best_params = grid_search.best_params_
   ```
-Why These Parameters: After performing Grid Search, these hyperparameters for KNN were selected for their optimal performance in classifying vehicle types. A lower number of neighbors (3) was chosen to allow the model to focus on more localized patterns, which is useful for distinguishing subtle differences between vehicle classes. The distance-based weight function prioritized closer neighbors, giving them more influence in the classification. The Euclidean distance metric was selected as it effectively measures straight-line similarity in the ResNet 50 embedding space, and the auto algorithm allowed scikit-learn to choose the most efficient method for nearest-neighbor searches based on the dataset size and structure.
+Why These Parameters: After performing Grid Search Cross-Validation, these hyperparameters for KNN were selected for their optimal performance in classifying vehicle types. A lower number of neighbors (3) was chosen to allow the model to focus on more localized patterns, which is useful for distinguishing subtle differences between vehicle classes. The distance-based weight function prioritized closer neighbors, giving them more influence in the classification. The Euclidean distance metric was selected as it effectively measures straight-line similarity in the ResNet 50 embedding space, and the auto algorithm allowed scikit-learn to choose the most efficient method for nearest-neighbor searches based on the dataset size and structure.
 
 ## 4. **Results**
 
@@ -193,14 +193,17 @@ The results of our preprocessing and data augmentation steps can be visualized i
 - Diversity Through Augmentation: Grayscale conversion, rotation, and horizontal flipping enhanced the dataset's variability.
 - Feature Extraction by Converting Images into High-Dimensional Embeddings (using ResNet 50). See how we generated them in [Section 3.2](#embeddings), under "Feature Extraction".
 
-### 4.3 **Baseline Model: Multi-Class SVM**
+### 4.3 **Model 1: Multi-Class SVM**
+_Non-Tuned Model Results_
 - Training Accuracy: 1.0
 - Testing Accuracy: 98.5%
 - Confusion Matrix:
   - Class 0: Precision = 0.98, Recall = 0.98
   - Class 1: Precision = 1.00, Recall = 0.97
 
-### 4.4 **Final Model: KNN**
+Tuned Model Results:
+
+### 4.4 **Model 2: KNN**
 - Training Accuracy: 98.6%
 - Testing Accuracy: 96.2%
 - Confusion Matrix:
