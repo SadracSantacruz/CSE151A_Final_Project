@@ -337,7 +337,7 @@ weighted avg       0.97      0.97      0.97       480
 Confusion Matrix (tuned KNN): <br>
 ![image](https://github.com/user-attachments/assets/48865307-c58e-44e7-b1f3-293c0856cd9b)
 
-## 5. **Discussion**
+## 5. **Discussion** :speaking_head:
 Our project’s journey into vehicle type recognition began with a simple goal: to classify vehicle images accurately into their respective categories (Car, Motorcycle, Bus, Truck). From the outset, our approach involved thorough data exploration, preprocessing steps, and the implementation of various machine learning models to address this problem effectively.
 
 ### 5.1 **Data Exploration, Preprocessing, Augmentation**
@@ -360,7 +360,7 @@ Another limitation was the computational efficiency of KNN during prediction. Wh
 <br>
 Lastly, while our evaluation metrics demonstrated strong performance, they do not account for edge cases or misclassifications in real-world scenarios. For example, how would the model perform if the dataset included ambiguous images (e.g., buses with advertisements that make them look like trucks, trucks that look like cars, or classifying a specific car in traffic filled with other cars and various noise)? These scenarios remain unexplored and pose challenges for practical deployment.
 
-## 6. **Conclusion**
+## 6. **Conclusion** :checkered_flag:
 Our final project highlights the potential of machine learning models for solving practical classification problems like vehicle type recognition. The SVM model emerged as the most effective approach due to its computational efficiency and strong performance in high-dimensional feature spaces. However, the KNN model also provided valuable insights into local patterns and alternative classification strategies, albeit inefficient and slow as we were with high-dimensional data (ResNet 50 embeddings).
 <br>
 <br>
