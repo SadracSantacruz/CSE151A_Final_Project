@@ -266,7 +266,7 @@ Testing Accuracy for Tuned SVM: 0.9854166666666667
    macro avg       0.98      0.98      0.98       480
 weighted avg       0.99      0.99      0.99       480
 ```
-Confusion Matrix (tuned SVM):
+Confusion Matrix (tuned SVM): <br>
 ![image](https://github.com/user-attachments/assets/095303fc-5005-4b97-97fc-de447278bfe9)
 
 ### 4.4 **Model 2: KNN**
@@ -288,7 +288,7 @@ Testing Set:
 ```
 
 ```
-Confusion Matrix (tuned KNN):
+Confusion Matrix (tuned KNN): <br>
 ![image](https://github.com/user-attachments/assets/48865307-c58e-44e7-b1f3-293c0856cd9b)
 
 ## 5. **Discussion**
