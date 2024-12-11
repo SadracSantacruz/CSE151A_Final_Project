@@ -1,4 +1,4 @@
-# Vehicle Type Recognition Project
+# CSE 151A: Vehicle Type Recognition Project
 
 ## 1. **Introduction** :car:
 The goal of our project was to develop a machine learning system capable of recognizing vehicle types (Car, Motorcycle, Bus, and Truck) based on images. This problem was chosen due to its practical applications in areas such as traffic management, road infrastructure, and smarter, efficient cities.
