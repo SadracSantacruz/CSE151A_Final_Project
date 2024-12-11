@@ -346,13 +346,13 @@ The exploration phase highlighted the importance of standardizing the dataset. T
 <br>
 However, one limitation was the relatively small dataset size (400 images across four classes). This limited the models' ability to generalize well, especially for real-world applications where diverse and dynamic environments are encountered. Additionally, the augmented dataset may still not fully mimic real-world variations like partial occlusions, weather effects, or extreme angles.
 
-### 5.2 Model Implementation and Results
-#### Multi-Class Support Vector Machine (SVM)
+### 5.2 **Model Implementation and Results**
+#### **Multi-Class Support Vector Machine (SVM)**:
 The Support Vector Machine (SVM) with a linear kernel proved to be a robust baseline. Its ability to handle high-dimensional ResNet embeddings efficiently led to near-perfect classification results. The tuned hyperparameters, including a lower regularization parameter \( C = 0.1 \), allowed the SVM to generalize well without overfitting. The results were believable, as the high accuracy on both training and testing datasets aligned with the theoretical strengths of SVM in high-dimensional spaces.
-#### K-Nearest Neighbors (KNN)
+#### **K-Nearest Neighbors (KNN)**:
 The K-Nearest Neighbors (KNN) model, while effective in leveraging local patterns, slightly underperformed compared to SVM. The tuned parameters (e.g., \( k=3 \), Euclidean distance) optimized its performance, but the inherent sensitivity of KNN to overlapping feature spaces led to minor misclassifications. This was evident in its slightly lower recall values for specific classes. Despite this, KNN’s simplicity and interpretability made it a valuable comparison model.
 
-### 5.3 Shortcomings and Future Challenges
+### 5.3 **Shortcomings and Future Challenges**
 One significant shortcoming was the limited dataset size and variability. Real-world images often contain noise, occlusions, and unpredictable variations, which were not fully captured in our dataset or augmentations. Additionally, our models relied on pre-extracted embeddings from ResNet 50 rather than training a custom deep learning model, which could potentially capture finer details specific to our classification task.
 <br>
 <br>
