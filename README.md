@@ -376,7 +376,7 @@ In conclusion, our project demonstrates the strengths and limitations of differe
 **Team Member 1**: <br>
 **Name**: Adrian Apsay <br>
 **Title**: Project Team Lead <br>
-**Contribution**: Laid out plans for each milestone up until the final submission. Managed and communicated with team members accordingly. Major code contributor. Major write-up contributor.
+**Contribution**: Laid out plans for each milestone up until the final submission. Managed and communicated with team members accordingly. Major code contributor throughout the entirety of the project, from exploratory data analysis to modeling. Major/primary write-up contributor.
 <br>
 <br>
 **Team Member 2**: <br>
